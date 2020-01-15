@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.example.callrecorder.R;
+import com.example.callrecorder.call.CallingActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
                 // startService(intent);
 
             }
+
+            startActivity(new Intent(MainActivity.this, CallingActivity.class));
 
             Log.d("admindebug","default");
         } catch (Exception e) {

@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.callrecorder">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
@@ -15,6 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".call.CallingActivity"></activity>
         <activity android:name=".callrecording.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,11 +29,10 @@
             android:name=".callrecording.DeviceAdminDemo"
             android:description="@string/device_description"
             android:label="@string/device_admin_label"
-            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
             <meta-data
                 android:name="android.app.device_admin"
                 android:resource="@xml/my_admin" />
-
 
             <intent-filter>
                 <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
@@ -40,11 +41,7 @@
             </intent-filter>
         </receiver>
 
-        <service android:name=".callrecording.TService" >
-        </service>
-
+        <service android:name=".callrecording.TService"></service>
     </application>
-
-
 
 </manifest>
