@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CallRecorder</string>
+    <string name="device_admin_label">device admin label</string>
+    <string name="device_description">device description</string>
+</resources>
